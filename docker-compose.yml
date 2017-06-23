@@ -1,0 +1,27 @@
+version: '2'
+volumes:
+  gems:
+  mysql:
+services:
+  web:
+    build: .
+    volumes:
+      - gems:/usr/local/bundle
+      - .:/opt/app
+    ports:
+      - "3000:3000"
+    command: rails s -p 3000 -b '0.0.0.0'
+    environment:
+      - TZ=America/Sao_Paulo
+    links:
+      - db
+
+  db:
+    image: mysql:5.6
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=mypass
+      - MYSQL_DATABASE=app_development
