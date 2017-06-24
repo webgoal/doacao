@@ -6,5 +6,6 @@ class InNeedController < ApplicationController
   end
 
   def list
+    @in_needs = InNeed.all
   end
 end

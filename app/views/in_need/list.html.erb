@@ -1,4 +1,4 @@
-<table>
+<table class="table">
   <tr>
     <th>Nome</th>
     <th>CPF</th>
@@ -10,17 +10,17 @@
     <th>Itens</th>
   </tr>
 
-   <#% @employee.position.skills.each do |skill| %>
-  <tr>
-    <td><#%= name %></td>
-    <td><#%= name %></td>
-    <td><#%= name %></td>
-    <td><#%= name %></td>
-    <td><#%= name %></td>
-    <td><#%= name %></td>
-    <td><#%= name %></td>
-    <td><#%= name %></td>
-  </tr>
-  <#% end %>
+  <% @in_needs.each do |person| %>
+    <tr>
+      <td><%= person.name %></td>
+      <td><%= person.cpf %></td>
+      <td><%= person.birthdate %></td>
+      <td><%= person.address %></td>
+      <td><%= person.phone %></td>
+      <td><%= person.n_members %></td>
+      <td><%= person.income %></td>
+      <td><%= person.items %></td>
+    </tr>
+  <% end %>
 
 </table>
