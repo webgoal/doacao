@@ -10,7 +10,7 @@ services:
       - .:/opt/app
     ports:
       - "3000:3000"
-    command: rails s -p 3000 -b '0.0.0.0'
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
     environment:
       - TZ=America/Sao_Paulo
     links:
