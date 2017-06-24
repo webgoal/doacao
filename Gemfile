@@ -43,6 +43,7 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   gem 'factory_girl_rails'
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -57,7 +58,6 @@ group :development do
 end
 
 group :test do
-  gem 'rspec-rails'
   gem 'ffaker'
 end
 
