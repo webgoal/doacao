@@ -2,7 +2,7 @@ class InNeedsController < ApplicationController
   def create
     @in_need = InNeed.new(params_inneed)
     if @in_need.save
-      redirect_to new_in_need_path
+      redirect_to in_needs_path
     else
       render :new
     end
