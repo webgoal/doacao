@@ -13,7 +13,8 @@ class InNeedsController < ApplicationController
     render :new
   end
 
-  def list
+  def index
+    @in_needs = InNeed.all
   end
 
 private
