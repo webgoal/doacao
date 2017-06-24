@@ -1,0 +1,28 @@
+<div class="container-fluid">
+	<a href="http://192.168.99.100:3000/cadastro_beneficiario#index">Adicionar Beneficiario</a>
+	<div class="row">
+		<div class="col-md-12">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Nome</th>
+						<th>Vulnerável</th>
+						<th>Renda</th>
+						<th>Quantidade Pessoas</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% @beneficiarios.each do |beneficiario|  %>
+						<tr>
+							<td><%= beneficiario.nome %></td>
+							<td><%= beneficiario.qtde_pessoas_vulneraveis %></td>
+							<td><%= beneficiario.renda %></td>
+							<td><%= beneficiario.qtde_pessoas_familia %> </td>
+						</tr>
+					<% end %>
+
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
