@@ -1,0 +1,31 @@
+<h1>Cadastro de Necessitados</h1>
+
+
+<%= form_for(@in_need, url: in_need_path) do |f| %>
+
+    <%= label_tag "Nome" %><br>
+    <%= f.text_field :name, type: "text" %><br>
+
+    <%= label_tag "CPF" %><br>
+    <%= f.text_field :cpf, type: "text" %><br>
+
+    <%= label_tag "Data de Nascimento" %><br>
+    <%= f.text_field :birthdate, type: "text" %><br>
+
+    <%= label_tag "Endereço" %><br>
+    <%= f.text_field :address, type: "text" %><br>
+
+    <%= label_tag "Telefone" %><br>
+    <%= f.text_field :phone, type: "text" %><br>
+
+    <%= label_tag "Número de dependentes" %><br>
+    <%= f.text_field :n_members, type: "number" %><br>
+
+    <%= label_tag "Renda Familiar" %><br>
+    <%= f.text_field :income, type: "number" %><br>
+
+    <%= label_tag "Itens de necessidade" %><br>
+    <%= f.text_field :items, type: "text" %><br>
+
+    <%= submit_tag "salvar" %>
+<%end%>
