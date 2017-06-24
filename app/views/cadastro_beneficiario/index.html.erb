@@ -36,14 +36,23 @@
 							<%= p.nome %>
 						</td>
 						<td>
-							TB - Monthly
+							<%= p.idade %>
 						</td>
 						<td>
-							01/04/2012
+							<%= p.endereco %>
 						</td>
 						<td>
-							Default
+							<%= p.qtde_pessoas_familia %>
 						</td>
+            <td>
+              <%= p.renda %>
+            </td>
+            <td>
+              <%= p.qtde_pessoas_vulneraveis %>
+            </td>
+            <td>
+              <%= p.telefone %>
+            </td>
 					</tr>
           <% end %>
 				</tbody>
@@ -51,3 +60,4 @@
 		</div>
 	</div>
 </div>
+<%= link_to "Novo Cadastro", new_cadastro_beneficiario_path %>
