@@ -1,2 +1,63 @@
-<h1>CadastroBeneficiario#index</h1>
-<p>Find me in app/views/cadastro_beneficiario/index.html.erb</p>
+<h1>Cadastro de Beneficiarios</h1>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>
+							Nome
+						</th>
+						<th>
+							Idade
+						</th>
+						<th>
+				      Endereço
+						</th>
+						<th>
+							Qtd de Pessoas
+						</th>
+            <th>
+              Renda($)
+            </th>
+            <th>
+              Qtd_Vulneraveis
+            </th>
+            <th>
+              Telefone
+            </th>
+					</tr>
+				</thead>
+				<tbody>
+          <% @beneficiarios.each do |p| %>
+					<tr>
+						<td>
+							<%= p.nome %>
+						</td>
+						<td>
+							<%= p.idade %>
+						</td>
+						<td>
+							<%= p.endereco %>
+						</td>
+						<td>
+							<%= p.qtde_pessoas_familia %>
+						</td>
+            <td>
+              <%= p.renda %>
+            </td>
+            <td>
+              <%= p.qtde_pessoas_vulneraveis %>
+            </td>
+            <td>
+              <%= p.telefone %>
+            </td>
+					</tr>
+          <% end %>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<%= link_to "Novo Cadastro", new_cadastro_beneficiario_path %>
