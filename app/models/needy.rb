@@ -1,0 +1,2 @@
+class Needy < ApplicationRecord
+end

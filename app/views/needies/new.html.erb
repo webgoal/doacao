@@ -1,0 +1,25 @@
+<h1>DoAção</h1>
+
+<%= form_for Needy.new do |f| %>
+  <p>
+    <label>Nome:</label><br>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <label>Faixa economica</label><br>
+    <%= f.text_field :economic_range %>
+  </p>
+  <p>
+    <label>Quantidade de dependentes</label><br>
+    <%= f.text_field :dependent %>
+  </p>
+  <p>
+    <label>Necessidade</label><br>
+    <%= f.text_field :necessity %>
+  </p>
+  <br>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
