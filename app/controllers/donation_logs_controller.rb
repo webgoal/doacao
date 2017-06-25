@@ -1,16 +1,17 @@
-class DonationsController < ApplicationController
+class DonationLogsController < ApplicationController
   def index
 
   end
 
   def create
-    @in_need = InNeed.new(params_inneed)
-    if @in_need.save
+    @donation_log = DonationLog.new(in_need_id: params[:in_need_id])
+    if @donation_log.save
       redirect_to in_needs_path
     else
-      render :new
+      render :index
     end
   end
+
  #
  #  def new
  #    @in_need = InNeed.new

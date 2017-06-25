@@ -1,7 +1,7 @@
 <h1>Cadastro de Necessitados</h1>
 
 
-<%= form_for(@in_need, url: in_need_path) do |f| %>
+<%= form_for(@in_need, url: in_needs_path) do |f| %>
 
     <%= label_tag "Nome" %><br>
     <%= f.text_field :name, type: "text" %><br>
@@ -27,5 +27,8 @@
     <%= label_tag "Itens de necessidade" %><br>
     <%= f.text_field :items, type: "text" %><br>
 
-    <%= submit_tag "salvar" %>
+    <%= link_to "Voltar", in_needs_path, class:"btn btn-warning btn-sm" %>
+    <%= submit_tag "Salvar", class:"btn btn-success btn-sm" %>
+
+
 <%end%>
