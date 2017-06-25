@@ -1,0 +1,21 @@
+
+<div class="container">
+
+<table class="table table-hover">
+  <tr style="color:white; background-color:DimGrey">
+    <th>Nome</th>
+    <th>Endereço</th>
+    <th>Itens</th>
+  </tr>
+
+  <% @in_needs.each do |person| %>
+    <tr>
+      <td><%= person.name %></td>
+      <td><%= person.address %></td>
+      <td><%= person.items %></td>
+    </tr>
+  <% end %>
+
+</table>
+
+</div>
