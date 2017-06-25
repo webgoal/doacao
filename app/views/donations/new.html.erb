@@ -1,0 +1,34 @@
+<h1>DoAção</h1>
+
+<%= form_for Donation.new do |f| %>
+  <p>
+    <label>Nome do item:</label><br>
+    <%= f.text_field :item_name %>
+  </p>
+  <p>
+    <label>Categoria do item</label><br>
+    <%= f.text_field :item_category %>
+  </p>
+  <p>
+    <label>Descrição do item</label><br>
+    <%= f.text_field :item_description %>
+  </p>
+  <p>
+    <label>Quantidade</label><br>
+    <%= f.text_field :item_qt %>
+  </p>
+  <p>
+    <label>Perecivel?</label><br>
+    <%= f.text_area :perishable %>
+  </p>
+  <br>
+  <p>
+    <label>Validade do item</label><br>
+    <%= f.text_field :item_validity %>
+  </p>
+  <br>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
