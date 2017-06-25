@@ -1,4 +1,8 @@
 class DonationsController < ApplicationController
+  def show
+    @lista = Donation.all
+  end
+
   def new
   end
 
