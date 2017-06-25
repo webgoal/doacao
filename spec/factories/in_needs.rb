@@ -5,8 +5,8 @@ FactoryGirl.define do
     birthdate "2017-06-24"
     address "MyString"
     phone "MyString"
-    n_members "MyString"
-    income "9.99"
+    n_members 0
+    income 9.99
     items "MyString"
   end
 end
