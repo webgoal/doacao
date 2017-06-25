@@ -8,11 +8,11 @@
       <td>Categoria</td>
     </thead>
     <tbody>
-      <% @elements.each do |element| %>
+      <% @lista.each do |element| %>
       <tr>
-        <td><%= puts element.quantidade %></td>
-        <td><%= puts element.nome %></td>
-        <td><%= puts element.categoria %></td>
+        <td><%= element.item_qt %></td>
+        <td><%= element.item_name %></td>
+        <td><%= element.item_category %></td>
       </tr>
       <% end %>
     </tbody>
