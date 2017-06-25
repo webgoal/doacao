@@ -17,7 +17,7 @@ class InNeedsController < ApplicationController
     @in_needs = InNeed.all
   end
 
-private
+ private
   def params_inneed
     params.require(:in_need).permit(:name, :cpf, :birthdate, :address, :phone, :n_members, :income, :items)
   end
