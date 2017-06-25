@@ -19,6 +19,6 @@ class InNeedsController < ApplicationController
 
 private
   def params_inneed
-    params.require(:in_need).permit(:name, :cpf, :birthdate, :address, :phone, :n_members, :income, :items)
+    params.require(:in_need).permit(:name, :cpf, :birthdate, :address, :phone, :n_members, :income, :items, :flag_donation)
   end
 end
