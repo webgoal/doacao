@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20170625133216) do
     t.string "items"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "flag_donation", default: false
   end
 
   add_foreign_key "donation_logs", "in_needs"
