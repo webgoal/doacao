@@ -1,0 +1,2 @@
+class Necessidade < ApplicationRecord
+end

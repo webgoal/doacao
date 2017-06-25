@@ -1,1 +1,35 @@
-<h1>Novo Beneficiário</h1>
+<h1 class="my-4">Novo Necessitado</h1>
+
+
+<%= form_for Beneficiario.new, url: {action: "create"}  do |f| %>
+  <div>
+    <%= f.label :nome, "Nome" %>
+    <%= f.text_field :nome %>
+  </div>
+  <div>
+    <%= f.label :idade, "Idade" %>
+    <%= f.text_field :idade %>
+  </div>
+  <div>
+    <%= f.label :endereco, "Endereço" %>
+    <%= f.text_field :endereco %>
+  </div>
+  <div>
+    <%= f.label :qtde_pessoas_familia, "Quantidade de pessoas" %>
+    <%= f.text_field :qtde_pessoas_familia %>
+  </div>
+  <div>
+    <%= f.label :renda, "Renda" %>
+    <%= f.number_field :renda %>
+  </div>
+  <div>
+    <%= f.label :qtde_pessoas_vulneraveis, "Quantidade de vulneráveis" %>
+    <%= f.text_field :qtde_pessoas_vulneraveis %>
+  </div>
+  <div>
+    <%= f.label :telefone, "Telefone" %>
+    <%= f.text_field :telefone %>
+  </div>
+
+  <%= f.submit "Cadastrar" %>
+<% end %>

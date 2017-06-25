@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170624190620) do
+ActiveRecord::Schema.define(version: 20170625131415) do
 
   create_table "beneficiarios", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string "nome"
@@ -20,6 +20,13 @@ ActiveRecord::Schema.define(version: 20170624190620) do
     t.float "renda", limit: 24
     t.integer "qtde_pessoas_vulneraveis"
     t.string "telefone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "necessidades", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string "nome"
+    t.string "produto"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

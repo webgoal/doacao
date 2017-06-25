@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @necessidade.nome %>
+</p>
+
+<p>
+  <strong>Produto:</strong>
+  <%= @necessidade.produto %>
+</p>
+
+<%= link_to 'Edit', edit_necessidade_path(@necessidade) %> |
+<%= link_to 'Back', necessidades_path %>

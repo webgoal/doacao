@@ -1,0 +1,27 @@
+<%= form_with(model: necessidade, local: true) do |form| %>
+  <% if necessidade.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(necessidade.errors.count, "error") %> prohibited this necessidade from being saved:</h2>
+
+      <ul>
+      <% necessidade.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome, id: :necessidade_nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :produto %>
+    <%= form.text_field :produto, id: :necessidade_produto %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

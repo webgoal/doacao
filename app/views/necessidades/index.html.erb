@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Necessidades</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Produto</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @necessidades.each do |necessidade| %>
+      <tr>
+        <td><%= necessidade.nome %></td>
+        <td><%= necessidade.produto %></td>
+        <td><%= link_to 'Show', necessidade %></td>
+        <td><%= link_to 'Edit', edit_necessidade_path(necessidade) %></td>
+        <td><%= link_to 'Destroy', necessidade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Necessidade', new_necessidade_path %>
