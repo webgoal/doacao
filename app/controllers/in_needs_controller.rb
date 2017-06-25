@@ -14,7 +14,7 @@ class InNeedsController < ApplicationController
   end
 
   def index
-    @in_needs = InNeed.all
+    @in_needs = InNeed.priorized
   end
 
 private
