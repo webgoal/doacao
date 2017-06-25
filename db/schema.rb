@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170625132757) do
+ActiveRecord::Schema.define(version: 20170625133216) do
+
+  create_table "donation_logs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.bigint "in_need_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["in_need_id"], name: "index_donation_logs_on_in_need_id"
+  end
 
   create_table "in_needs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string "name"
@@ -26,4 +33,5 @@ ActiveRecord::Schema.define(version: 20170625132757) do
     t.boolean "flag_donation", default: false
   end
 
+  add_foreign_key "donation_logs", "in_needs"
 end

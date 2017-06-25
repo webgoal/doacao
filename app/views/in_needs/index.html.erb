@@ -1,5 +1,6 @@
-<div class="container">
 
+<div class="container">
+<%= link_to "Nova pessoa", new_in_need_path, class:"btn btn-success btn-sm" %>
 <table class="table table-hover">
   <tr style="color:white; background-color:DimGrey">
     <th>Nome</th>
@@ -23,7 +24,7 @@
       <td><%= person.n_members %></td>
       <td><%= person.income %></td>
       <td><%= person.items %></td>
-      <td><button type="button" title="Doar <%=person.items%>" class="btn btn-success btn-xs">Doar</button></td>
+      <td><%= link_to "Doar", donation_logs_path(in_need_id: person.id), method: :post, class:"btn btn-success btn-sm" %></td>
     </tr>
   <% end %>
 
