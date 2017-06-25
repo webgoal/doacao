@@ -28,7 +28,7 @@ class NecessidadesController < ApplicationController
 
     respond_to do |format|
       if @necessidade.save
-        format.html { redirect_to @necessidade, notice: 'Necessidade was successfully created.' }
+        format.html { redirect_to @necessidade, notice: 'Necessidade foi criada.' }
         format.json { render :show, status: :created, location: @necessidade }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class NecessidadesController < ApplicationController
   def update
     respond_to do |format|
       if @necessidade.update(necessidade_params)
-        format.html { redirect_to @necessidade, notice: 'Necessidade was successfully updated.' }
+        format.html { redirect_to @necessidade, notice: 'Necessidade foi atualizada.' }
         format.json { render :show, status: :ok, location: @necessidade }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class NecessidadesController < ApplicationController
   def destroy
     @necessidade.destroy
     respond_to do |format|
-      format.html { redirect_to necessidades_url, notice: 'Necessidade was successfully destroyed.' }
+      format.html { redirect_to necessidades_url, notice: 'Necessidade foi apagada.' }
       format.json { head :no_content }
     end
   end
