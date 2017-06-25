@@ -1,38 +1,43 @@
 <h1>Listagem de Produtos</h1>
+<section class="col-sm-12">
+  <section class="col-xm-4">
+    <table>
+      <thead>
+        <td>Quantidade</td>
+        <td>Nome</td>
+        <td>Categoria</td>
 
-<section class="col-xm-4">
-  <table>
-    <thead>
-      <td>Nome</td>
+      </thead>
+      <tbody>
+        <% @lista.each do |element| %>
+        <tr>
+          <td><%= element.item_qt %></td>
+          <td><%= element.item_name %></td>
+          <td><%= element.item_category %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <button type="button" alt="Cadastrar" value="Cadastrar" ><%= link_to "Cadastrar Usuario", new_donations_path %> </button>
+  </section>
 
-    </thead>
-    <tbody>
-      <% @listaP.each do |element| %>
-      <tr>
-        <td><%= element.nome %></td>
-      </tr>
-      <% end %>
-    </tbody>
-  </table>
-  <button type="button" alt="Cadastrar" value="Cadastrar" ><%= link_to "Cadastrar Usuario", new_donations_path %> </button>
-</section>
-
-<section class="col-xm-4">
-  <table>
-    <thead>
-      <td>Quantidade</td>
-      <td>Nome</td>
-      <td>Categoria</td>
-    </thead>
-    <tbody>
-      <% @lista.each do |element| %>
-      <tr>
-        <td><%= element.item_qt %></td>
-        <td><%= element.item_name %></td>
-        <td><%= element.item_category %></td>
-      </tr>
-      <% end %>
-    </tbody>
-  </table>
-  <button type="button" alt="Cadastrar" value="Cadastrar" ><%= link_to "Cadastrar Produto", new_donations_path %> </button>
+  <section class="col-xm-4">
+    <table>
+      <thead>
+        <td>Quantidade</td>
+        <td>Nome</td>
+        <td>Categoria</td>
+      </thead>
+      <tbody>
+        <% @lista.each do |element| %>
+        <tr>
+          <td><%= element.item_qt %></td>
+          <td><%= element.item_name %></td>
+          <td><%= element.item_category %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <button type="button" alt="Cadastrar" value="Cadastrar" ><%= link_to "Cadastrar Produto", new_donations_path %> </button>
+  </section>
 </section>
