@@ -1,6 +1,23 @@
 <h1>Listagem de Produtos</h1>
 
-<section id="table-width">
+<section class="col-xm-4">
+  <table>
+    <thead>
+      <td>Nome</td>
+
+    </thead>
+    <tbody>
+      <% @listaP.each do |element| %>
+      <tr>
+        <td><%= element.nome %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <button type="button" alt="Cadastrar" value="Cadastrar" ><%= link_to "Cadastrar Usuario", new_donations_path %> </button>
+</section>
+
+<section class="col-xm-4">
   <table>
     <thead>
       <td>Quantidade</td>
@@ -17,4 +34,5 @@
       <% end %>
     </tbody>
   </table>
+  <button type="button" alt="Cadastrar" value="Cadastrar" ><%= link_to "Cadastrar Produto", new_donations_path %> </button>
 </section>
